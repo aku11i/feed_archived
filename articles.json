@@ -1,0 +1,10 @@
+{
+  "feeds": ["https://zenn.dev/aktriver/feed"],
+  "extraArticles": [
+    {
+      "title": "Next.js のデータフェッチについて",
+      "url": "https://speakerdeck.com/aku11i/next-dot-js-falsedetahuetutinituite",
+      "publishedDate": "2021/11/24 12:00:00"
+    }
+  ]
+}
