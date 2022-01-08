@@ -5,7 +5,7 @@ import { Feed, FeedOptions } from "feed";
 const parser = new Parser();
 
 const feedOptions: FeedOptions = {
-  title: "aku11i's RSS feed",
+  title: "aku11i's RSS",
   author: {
     name: "aku11i",
     link: "https://akutagawa.dev",
