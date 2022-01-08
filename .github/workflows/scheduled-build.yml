@@ -1,0 +1,14 @@
+name: generate-feed
+
+on:
+  schedule:
+    - cron: "37 * * * *"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fire the deployment build of Vercel
+        run: curl "${{ secrets.SCHEDULED_BUILD_HOOK_URL }}"
