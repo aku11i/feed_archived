@@ -1,6 +1,6 @@
 import {
   fetchArticlesFromRss,
-  generateRssFeed,
+  generateRss,
   mergeArticles,
 } from "./lib/article.js";
 import * as path from "node:path";
@@ -11,10 +11,11 @@ import { createRequire } from "node:module";
  * @see https://github.com/TypeStrong/ts-node/issues/1007#issuecomment-953464137
  * FIXME
  */
-const { feeds, extraArticles }: typeof import("./articles.json") =
-  createRequire(import.meta.url)("./articles.json");
+const { feeds, extraArticles }: typeof import("./feed.json") = createRequire(
+  import.meta.url
+)("./feed.json");
 
-const RSS_DESTINATION = path.join(process.cwd(), "public", "feed.rss");
+const RSS_DESTINATION = path.join(process.cwd(), "public", "articles.rss");
 
 const articlesFromFeed = await Promise.all(
   feeds.map((feed) => fetchArticlesFromRss(feed))
@@ -22,7 +23,7 @@ const articlesFromFeed = await Promise.all(
 
 const articles = mergeArticles(...articlesFromFeed, extraArticles);
 
-const rss = generateRssFeed(articles);
+const rss = generateRss(articles);
 
 await fs.writeFile(RSS_DESTINATION, rss, { encoding: "utf-8" });
 

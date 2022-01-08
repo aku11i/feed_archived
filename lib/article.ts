@@ -33,7 +33,7 @@ export const mergeArticles = (...articlesList: Article[][]): Article[] => {
   );
 };
 
-export const generateRssFeed = (articles: Article[]): string => {
+export const generateRss = (articles: Article[]): string => {
   const feed = new Feed(feedOptions);
   articles.forEach((article) => {
     feed.addItem({
