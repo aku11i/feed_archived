@@ -6,6 +6,7 @@ const parser = new Parser();
 
 const feedOptions: FeedOptions = {
   title: "aku11i's RSS",
+  description: "",
   author: {
     name: "aku11i",
     link: "https://akutagawa.dev",
