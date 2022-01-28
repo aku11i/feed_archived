@@ -1,6 +1,12 @@
 {
   "feeds": ["https://zenn.dev/aktriver/feed"],
+  "// publishDate は GMT で指定する": "",
   "extraArticles": [
+    {
+      "title": "reCAPTCHA v3をReact Hooksで実装する",
+      "url": "https://tech.uzabase.com/entry/2022/01/28/150843",
+      "publishedDate": "2022/01/28 06:10:00"
+    },
     {
       "title": "Next.js のデータフェッチについて",
       "url": "https://speakerdeck.com/aku11i/next-dot-js-falsedetahuetutinituite",
